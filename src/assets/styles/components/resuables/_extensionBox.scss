@@ -1,0 +1,170 @@
+.extensionBox {
+    top: 30px;
+    position: absolute;
+    // display: none;
+    opacity: 0;
+    left: -10%;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+    width: 120%;
+
+    &--open {
+        // display: block;
+        opacity: 1;
+        top: 50px;
+        z-index: 200;
+        visibility: visible;
+    }
+    &__container {
+        // height: 380px;
+
+        background-color: $background-color;
+        border-radius: 4px;
+        border: 2px solid $light-color;
+        overflow: auto;
+
+        // box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), 0 -2px 4px rgba(0, 0, 0, 0.2);
+
+        &__label {
+            font-size: $font-size-sm;
+            font-weight: 600;
+            color: $secondary-color;
+            padding: 0.5rem 1rem;
+
+            border-bottom: 1px solid $light-color;
+
+            width: 100%;
+            // text-transform: uppercase;
+
+            &:last-child {
+                border-top: 1px solid $light-color;
+                border-bottom: 0;
+            }
+        }
+
+        &__items {
+            height: 330px;
+            overflow: auto;
+            &__item {
+                margin: 0.25rem 0;
+                padding: 0.5rem 1rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                background-color: transparent;
+                transition: 0.1s ease-in;
+                &__img {
+                    width: 60px;
+                    aspect-ratio: $product-aspect-ratio;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(237, 237, 237);
+                }
+
+                &__desc {
+                    flex-grow: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: transparent;
+                    &__name {
+                    }
+                    &__categ {
+                        font-style: italic;
+                        font-weight: 600;
+                        color: $secondary-color;
+                    }
+                }
+            }
+
+            &__not-found {
+                height: 100%;
+                width: 70%;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                flex-direction: column;
+                color: $secondary-color;
+
+                &__header {
+                    font-size: $font-size-md;
+                    font-weight: 600;
+                }
+
+                &__sub-header {
+                    font-size: $font-size-md;
+                    margin: 0.5rem 0;
+
+                    @include media-breakpoint-down(md) {
+                        font-size: $font-size-base;
+                    }
+                }
+
+                &__desc {
+                    // color: $primary-color;
+                    font-size: $font-size-sm;
+                }
+
+                @include media-breakpoint-down(md) {
+                    width: 90%;
+                }
+            }
+        }
+
+        &__products {
+            &__items {
+                padding: 1rem 0;
+            }
+
+            &__item {
+                padding: 0.3rem 1rem;
+                background-color: transparent;
+                transition: 0.1s ease-in;
+                display: flex;
+                gap: 0.6rem;
+                align-items: center;
+
+                &__icon {
+                    display: flex;
+                }
+
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+                &:hover {
+                    background-color: rgb(237, 237, 237);
+                }
+            }
+
+            &--profile {
+                .extensionBox__container__products__item {
+                    padding: 0.5rem 1rem;
+                }
+            }
+        }
+    }
+}
+
+.extensionBox-products {
+    width: 300px;
+    &--profile {
+        width: 240px;
+        left: -220px;
+    }
+}
+.extensionBox-products.extensionBox--open {
+    top: 40px;
+}

@@ -1,0 +1,48 @@
+.success-page {
+    &__desc {
+        max-width: 500px;
+        align-items: center;
+        text-align: center;
+        margin-top: 1rem;
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            max-width: 100%;
+        }
+        &__title {
+            font-size: $font-size-lg;
+            font-weight: 600;
+            margin: 1rem 0;
+
+            @include media-breakpoint-down(md) {
+                font-size: $font-size-md;
+            }
+        }
+
+        &__content {
+            margin-bottom: 0.5rem;
+
+            @include media-breakpoint-down(md) {
+                font-size: $font-size-sm;
+            }
+        }
+
+        &__image {
+            margin: auto;
+            width: 180px;
+
+            @include media-breakpoint-down(md) {
+                width: 150px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__link {
+        @include media-breakpoint-down(md) {
+            font-size: $font-size-sm;
+        }
+    }
+}

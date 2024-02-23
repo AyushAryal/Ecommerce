@@ -1,0 +1,42 @@
+input {
+    border: 1px solid rgb(195, 195, 195);
+    // font-size: $font-size-sm;
+}
+
+input:focus,
+input:active {
+    border: 1px solid rgb(50, 50, 50);
+    box-shadow: none;
+    outline: none;
+}
+::-webkit-input-placeholder {
+    /* Edge */
+    font-size: $font-size-sm;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-size: $font-size-sm;
+}
+
+::placeholder {
+    font-size: $font-size-sm;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.35rem 0.75rem;
+    font-size: $font-size-sm;
+    border: 1px solid rgb(195, 195, 195);
+}
+
+textarea:focus,
+textarea:active {
+    border: 1px solid rgb(50, 50, 50);
+    box-shadow: none;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}

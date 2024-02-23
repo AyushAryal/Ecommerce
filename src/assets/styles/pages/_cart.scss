@@ -1,0 +1,26 @@
+.cart-page {
+}
+
+.cart-container {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+
+    @include media-breakpoint-down(lg) {
+        flex-direction: column;
+    }
+
+    &__left {
+        flex: 2.5;
+        padding-right: 2rem;
+        border-right: 1px solid #ccc;
+        @include media-breakpoint-down(lg) {
+            padding-right: 0;
+            border-right: none;
+        }
+    }
+
+    &__right {
+        flex: 1;
+    }
+}

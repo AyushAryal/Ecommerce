@@ -1,0 +1,100 @@
+.profile-page {
+    &__container {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+        position: relative;
+        @include media-breakpoint-down(lg) {
+            flex-direction: column;
+            margin-top: 0;
+        }
+    }
+
+    &__my-profile {
+        // height: 100%;
+        min-height: 50vh;
+        flex: 1;
+        @include media-breakpoint-down(lg) {
+            min-height: fit-content;
+        }
+    }
+
+    &__other-details {
+        border-left: 1px solid #ccc;
+        flex: 3;
+        padding-left: 2rem;
+
+        @include media-breakpoint-down(lg) {
+            border-left: none;
+            padding-left: 0;
+        }
+    }
+}
+
+.profile-header {
+    font-size: $font-size-md;
+    font-weight: 600;
+}
+
+.my-orders {
+    &__container {
+        margin-top: 1.5rem;
+    }
+}
+
+.acc-header {
+    flex: 1;
+    color: $secondary-color;
+    &__title {
+        // font-size: $font-size-sm;
+
+        font-size: $font-size-xs;
+    }
+
+    &__value {
+        font-weight: 600;
+        font-size: $font-size-sm;
+    }
+
+    &:last-child {
+        @include media-breakpoint-down(sm) {
+            text-align: end;
+        }
+    }
+}
+
+.account-settings {
+    &__container {
+    }
+
+    &__user-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 1rem;
+        @include media-breakpoint-down(lg) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+        }
+    }
+
+    &__reset-password {
+        margin-top: 1.5rem;
+    }
+}
+
+.account-settings__user-details {
+    margin-top: 1rem;
+    .knits-form__input {
+        margin: 0;
+    }
+}
+.back-to-orders {
+    color: $secondary-color;
+    text-decoration: underline;
+    font-size: $font-size-sm;
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}

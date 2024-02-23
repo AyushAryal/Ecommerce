@@ -1,0 +1,194 @@
+.navbar {
+    background-color: $background-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.2rem 0;
+    z-index: 200;
+
+    // box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #e2e2e2;
+
+    @include media-breakpoint-down(lg) {
+        position: relative;
+    }
+    &__container {
+        margin: auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include manageWidth;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        // flex: 1;
+
+        &__logo {
+            width: 220px;
+            @include media-breakpoint-down(lg) {
+                width: 190px;
+            }
+            @include media-breakpoint-down(md) {
+                width: 170px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+
+        &__links {
+            &__products {
+                cursor: pointer;
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+                position: relative;
+
+                &__name {
+                }
+
+                &__icon {
+                    svg {
+                        transition: 0.2s ease-in-out;
+                        // transform-origin: center;
+                    }
+                    svg path {
+                        fill: $secondary-color;
+                    }
+
+                    &--rotate {
+                        svg {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__middle {
+    }
+
+    &__right {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+
+        img {
+            width: 26px;
+        }
+
+        &__indi {
+            cursor: pointer;
+            padding: 0.1rem 0.25rem;
+
+            &--cart {
+                position: relative;
+                margin-right: 0.45rem;
+            }
+            &__profile {
+                position: relative;
+            }
+
+            &__cart-num {
+                position: absolute;
+                height: 17px;
+                font-weight: 600;
+                font-size: 0.75rem;
+                width: 17px;
+                background-color: $primary-color;
+                right: -3px;
+                top: 0px;
+                color: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.search-products {
+    border: 1px solid rgb(195, 195, 195);
+    padding: 0.45rem 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: 450px;
+    font-size: $font-size-sm;
+    position: relative;
+
+    @include media-breakpoint-down(xl) {
+        width: 290px;
+    }
+    @include media-breakpoint-down(lg) {
+        width: 100%;
+        .extensionBox {
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .extensionBox__container {
+            border: none;
+        }
+
+        .extensionBox__container__items {
+            height: 280px;
+        }
+    }
+
+    &--desktop {
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+    }
+
+    svg {
+        path {
+            fill: $secondary-color !important;
+        }
+    }
+    input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        flex: 1;
+
+        &:focus,
+        &:active {
+            border: none;
+            outline: none;
+            font-size: $font-size-sm;
+        }
+    }
+}
+
+.navbar-links--desktop {
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+}
+.navbar-right {
+    &--desktop {
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+    }
+
+    &--mobile {
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+        @include media-breakpoint-down(md) {
+            transform: scale(0.85);
+        }
+    }
+}

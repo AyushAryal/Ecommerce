@@ -1,0 +1,24 @@
+//import vendors
+@import "./vendors/bootstrap", "./vendors/phone", "./vendors/react-toastify",
+    "./vendors/swiper";
+
+//import abstracts
+@import "./abstract/variables", "./abstract/function";
+
+//Base import
+@import "./base/base";
+
+//import components
+@import "./components/navbar", "./components/resuables/buttons",
+    "./components/resuables/inputs", "./components/resuables/extensionBox",
+    "./components/resuables/shimmer", "./components/resuables/product-card",
+    "./components/resuables/form", "./components/resuables/category-card",
+    "./components/footer", "./components/resuables/cart-item",
+    "./components/resuables/wishlist-card", "./components/myprofile",
+    "./components/resuables/order", "./components/mobile-nav",
+    "./components/resuables/empty-state";
+
+//import pages
+@import "./pages/homepage", "./pages/loginpage", "./pages/pagenotfound",
+    "./pages/productspage", "./pages/successpage", "./pages/resetpage",
+    "./pages/cart", "./pages/wishlist", "./pages/profilepage";

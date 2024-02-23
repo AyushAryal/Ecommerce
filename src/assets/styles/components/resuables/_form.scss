@@ -1,0 +1,61 @@
+.knits-form {
+    width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+        padding: 0;
+    }
+    &__input {
+        width: 100%;
+        margin: 1rem 0;
+
+        &__label {
+            padding-bottom: 0.45rem;
+            // font-size: $font-size-md;
+            font-weight: 600;
+            // text-transform: uppercase;
+        }
+
+        &__field {
+            width: 100%;
+            padding: 0.35rem 0.75rem;
+        }
+
+        &__error {
+            color: $danger-color;
+            font-size: $font-size-sm;
+        }
+
+        &--last {
+            margin: 0.6rem 0;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem 0;
+    }
+
+    &__bottom {
+        text-align: center;
+
+        @include media-breakpoint-down(md) {
+            font-size: $font-size-sm;
+        }
+    }
+}
+
+.form-info {
+    font-size: $font-size-sm;
+    padding: 0.5rem;
+    background-color: aliceblue;
+    border-top: 1px solid $primary-color;
+}

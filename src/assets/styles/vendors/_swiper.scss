@@ -1,0 +1,65 @@
+@import "swiper/css/bundle";
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #563b18;
+    transform: translateY(-50%);
+    padding: 4rem 1rem;
+    top: 55%;
+
+    color: #b4b4b4;
+    &::after {
+        font-size: 1.75rem;
+        font-weight: 900;
+        opacity: 0.75;
+    }
+}
+
+.swiper-button-next {
+    right: 0px;
+}
+.swiper-button-prev {
+    left: 0px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    opacity: 0;
+    transition: 0.15s ease-in-out;
+}
+.swiper:hover {
+    .swiper-button-next,
+    .swiper-button-prev {
+        opacity: 1;
+    }
+}
+.product-page__right__sub {
+    margin-top: 0.75rem;
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: #b4b4b4;
+        padding: 1rem;
+        opacity: 0.5;
+        top: 65%;
+        &::after {
+            content: none;
+        }
+    }
+
+    .swiper-button-next {
+        right: 0px;
+    }
+    .swiper-button-prev {
+        left: 0px;
+    }
+
+    &__swiper {
+        &__slide {
+            cursor: pointer;
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+            &--active {
+                opacity: 0.4;
+            }
+        }
+    }
+}

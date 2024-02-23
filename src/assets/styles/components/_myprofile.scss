@@ -1,0 +1,91 @@
+.my-profile {
+    position: sticky;
+    top: 7rem;
+    @include media-breakpoint-down(lg) {
+        position: relative;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1.25rem;
+    }
+    &__desc {
+        // text-align: center;
+        margin: 1rem 0 2rem 0;
+
+        @include media-breakpoint-down(lg) {
+            margin: 0;
+        }
+
+        &__name {
+            font-size: $font-size-md;
+        }
+
+        &__email {
+            font-weight: 600;
+            color: $secondary-color;
+            font-size: $font-size-sm;
+            @include media-breakpoint-down(sm) {
+                max-width: 200px;
+            }
+        }
+    }
+
+    &__actions {
+        &--desktop {
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+        &--mobile {
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+
+        &__icons {
+            display: flex;
+            gap: 1rem;
+
+            &__icon {
+                padding: 0.2rem 0.5rem;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                display: flex;
+                align-items: center;
+                padding-top: 0;
+
+                justify-content: center;
+            }
+        }
+
+        &__indi {
+            margin: 0.5rem 0;
+            padding: 0.25rem 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 4px;
+            transition: 0.2s ease-in-out;
+            cursor: pointer;
+
+            &--active {
+                background-color: #f1f1f1;
+            }
+
+            &__icon {
+                width: 16px;
+                img {
+                    width: 100%;
+                }
+            }
+
+            &__label {
+            }
+        }
+    }
+}
+
+.my-profile__actions__indi:hover {
+    background-color: #f1f1f1;
+}

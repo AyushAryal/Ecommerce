@@ -1,0 +1,22 @@
+@import "react-phone-number-input/style.css";
+
+.PhoneInputInput {
+    border: none;
+    outline: none;
+}
+.PhoneInputInput:focus,
+.PhoneInputInput:hover {
+    outline: none;
+    border: none;
+}
+
+.PhoneInput {
+    padding: 0.35rem 0.75rem;
+    border: 1px solid rgb(195, 195, 195);
+}
+.PhoneInput:focus,
+.PhoneInput:active {
+    border: 1px solid rgb(50, 50, 50);
+    box-shadow: none;
+    outline: none;
+}

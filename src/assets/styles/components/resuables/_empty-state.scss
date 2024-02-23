@@ -1,0 +1,18 @@
+.empty-state {
+    margin: 8rem auto;
+
+    @include media-breakpoint-down(md) {
+        margin: 5rem 0;
+    }
+    text-align: center;
+    &__text {
+        font-size: $font-size-md;
+        font-weight: 600;
+    }
+
+    &__order {
+        color: $secondary-color;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

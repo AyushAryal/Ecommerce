@@ -1,0 +1,36 @@
+@mixin srollz {
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background-color: $background-color;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background-color: $secondary-color;
+        opacity: 0.1;
+    }
+}
+
+@mixin manageWidth {
+    width: $container-base;
+
+    @include media-breakpoint-down(xl) {
+        width: $container-xl;
+    }
+
+    @include media-breakpoint-down(lg) {
+        width: $container-lg;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: $container-md;
+    }
+    @include media-breakpoint-down(sm) {
+        width: $container-sm;
+        padding: $container-sm-padding;
+    }
+}

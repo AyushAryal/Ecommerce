@@ -1,0 +1,106 @@
+.skeleton-wrap {
+    background-color: $skeleton-color;
+    position: relative;
+    overflow: hidden;
+
+    &--text {
+        width: 100%;
+        height: 15px;
+        .shimmer {
+            width: 60px;
+        }
+    }
+    &--title {
+        height: 1.75rem;
+        width: 35%;
+        min-width: 200px;
+        border-radius: 8px;
+
+        @include media-breakpoint-down(md) {
+            height: 1.5rem;
+        }
+    }
+
+    &--banner {
+        width: 100%;
+        aspect-ratio: $banner-aspect-ratio;
+    }
+    &--text {
+        height: 0.7rem;
+        margin: 0.6rem 0;
+        width: 100%;
+        border-radius: 6px;
+        @include media-breakpoint-down(md) {
+            margin: 0.25rem 0;
+        }
+    }
+    &--info {
+        height: 5rem;
+        width: 100%;
+
+        @include media-breakpoint-down(md) {
+            width: 3.5rem;
+        }
+    }
+    &--order {
+        width: 100%;
+        height: 4rem;
+        border-radius: 8px;
+        margin: 1.25rem 0;
+
+        @include media-breakpoint-down(md) {
+            height: 3.25rem;
+        }
+    }
+    &--partial-text {
+        height: 0.7rem;
+        margin: 0.6rem 0;
+        width: 20%;
+        min-width: 175px;
+        border-radius: 6px;
+        @include media-breakpoint-down(md) {
+            margin: 0.25rem 0;
+        }
+    }
+
+    &--product-image {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    &--button-sm {
+        height: 1.75rem;
+        width: 6rem;
+    }
+
+    &--button-lg {
+        height: 2.25rem;
+        width: 12.5rem;
+    }
+}
+
+.shimmer-container {
+    width: 130%;
+    left: -15%;
+    height: 100%;
+    position: relative;
+    animation: loading 1.5s infinite ease-in-out;
+}
+.shimmer {
+    position: relative;
+    top: -5%;
+    width: 10%;
+    background-color: $shimmer-color;
+    height: 160%;
+    transform: rotate(30deg);
+    left: -30px;
+    transform: skew(-20deg);
+}
+@keyframes loading {
+    0% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(120%);
+    }
+}

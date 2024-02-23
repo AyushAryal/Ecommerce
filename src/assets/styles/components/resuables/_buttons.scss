@@ -1,0 +1,40 @@
+button {
+}
+.btn {
+}
+
+.btn-primary {
+    background-color: $primary-color !important;
+    width: 200px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #175975 !important;
+}
+
+.btn:disabled {
+    opacity: 0.75;
+    cursor: none;
+    pointer-events: none;
+}
+
+.btn-secondary {
+}
+
+.btn-lg {
+}
+.btn-full {
+    width: 100%;
+}
+.btn-sm {
+    padding: 0.2rem 1.1rem;
+    font-size: $font-size-sm;
+}
+.btn-fit {
+    width: fit-content;
+    font-size: $font-size-sm;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    // padding: 0.1rem 0;
+}

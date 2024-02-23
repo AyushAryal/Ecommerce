@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    // overflow-x: hidden;
+}
+body {
+    background-color: $background-color;
+    @include srollz;
+}
+.page {
+    margin: auto;
+    padding: 8.5rem 0;
+    position: relative;
+    min-height: 90vh;
+    @include manageWidth;
+    @include media-breakpoint-down(lg) {
+        padding-top: 2rem;
+        padding-bottom: 3.5rem;
+        min-height: 80vh;
+    }
+}
+
+.section {
+}
+
+a,
+a:focus,
+a:hover {
+    color: $secondary-color;
+}
+
+.link-withoutdecoration,
+.link-withoutdecoration:focus,
+.link-withoutdecoration:hover {
+    color: initial;
+    text-decoration: none;
+}
+.link-withdecoration {
+    color: $secondary-color;
+    text-decoration: underline;
+}
+.page-header {
+    font-size: $font-size-lg;
+    font-weight: 600;
+
+    @include media-breakpoint-down(md) {
+        font-size: $font-size-md;
+    }
+}
+
+.center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: $font-size-sm;
+    background-color: aliceblue;
+    padding: 0.25rem 1rem;
+    text-align: center;
+}
+
+.backdrop {
+    height: 130vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // background-color: black;
+    // opacity: 0.4;
+    z-index: 100;
+}
+
+.page-container {
+    margin: 2.5rem auto;
+
+    @include manageWidth;
+}

@@ -1,0 +1,112 @@
+.footer-container {
+    padding: 3rem 0 0rem 0;
+    background-color: #f9f9f9;
+}
+
+.footer {
+    display: flex;
+    gap: 3rem;
+    font-size: $font-size-sm;
+    padding: 2.5rem 0;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    &__logo {
+        margin: auto;
+        width: 180px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex: 1.75;
+
+        &__first {
+            flex: 1;
+            &__content {
+            }
+        }
+    }
+
+    &__right {
+        &__socials {
+            flex: 1;
+
+            &__icons {
+                margin-top: 1rem;
+                display: flex;
+                gap: 1.5rem;
+
+                &__icon {
+                    width: 25px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &__contact {
+            flex: 1;
+
+            &__content {
+                &__indi {
+                    margin-top: 0.5rem;
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: center;
+                    @include media-breakpoint-down(lg) {
+                        justify-content: center;
+                    }
+
+                    &__logo {
+                        width: 18px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-title {
+    font-size: $font-size-md;
+    font-weight: 600;
+}
+
+.copyright-container {
+    padding: 0.75rem 0;
+    border-top: 2px solid #ccc;
+}
+.copyright {
+    display: flex;
+    text-align: center;
+    width: fit-content;
+    background-color: transparent;
+    gap: 1rem;
+    margin: auto;
+    div {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    @include media-breakpoint-down(lg) {
+        font-size: $font-size-xs;
+        flex-direction: column;
+        gap: 0.15rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
